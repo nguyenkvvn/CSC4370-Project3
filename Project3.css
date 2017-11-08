@@ -1,0 +1,23 @@
+body
+{
+  text-align: center;
+  font-family: "Arial";
+}
+
+table
+{
+  text-align: center;
+}
+
+/*Table cell colors.
+you can set the class of a td cell to "off" or "on" to use the colors below.
+*/
+td.off
+{
+  background-color: white;
+}
+
+td.on
+{
+  background-color: green;
+}

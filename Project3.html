@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="Project3.css">
+    <title>Project 3: Game of Life</title>
+
+    <script>
+      var gameStarted = 0;
+
+      function startGame()
+      {
+        gameStarted = 1;
+        stepOne();
+      }
+      function resetGame()
+      {
+        gameStarted = 0;
+        makeTable();
+      }
+      // stepOne() can be called by the user or from another method. It takes a step in the generation.
+      function stepOne()
+      {
+        //game logic should go here
+      }
+      // stepGen() is called when the user submits the generation step form
+      function stepGen()
+      {
+        //get the number of steps desired from the "generations" number entry
+        var step = $('.generations').attr('value');
+        //step forward that many generations
+        for (i = 0; i < step; i++)
+        {
+          stepOne();
+        }
+      }
+
+      // makeTable() is called when the user submits the table size form.
+      function makeTable()
+      {
+        //replace the "gameTable" with a script to create the desired rows and elements
+        //I recommend using nested for loops to create the HTML table script.
+        //I leave this for you to do in case the libary we import requires special tagging to the table cells.
+      }
+
+      //Table Click Script
+      //code sourced from: https://stackoverflow.com/questions/21033368/javascript-onclick-event-html-table
+      var table = document.getElementById("gameTable");
+      if (table != null) {
+          for (var i = 0; i < table.rows.length; i++) {
+              for (var j = 0; j < table.rows[i].cells.length; j++)
+              table.rows[i].cells[j].onclick = function ()
+              {
+                  //INSERT CELL "clicked on" LOGIC HERE
+                  //Andrew, I recommend
+              };
+          }
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <h1>Andrew and Kevin's Game of Life</h1>
+    <hr>
+    <table id="gametable">
+      <tr><td>Set the desired size of the table below.</td></tr>
+    </table>
+    <hr>
+    <input type="button" name="sizesubmit" value="  Start game   " onclick="startGame()">
+    <input type="button" name="sizesubmit" value="  Pause/Unpause game   " onclick="pauseunpauseGame()">
+    <input type="button" name="sizesubmit" value="  Reset game   " onclick="resetGame()">
+    <br>
+    <input type="button" name="sizesubmit" value="  Step 1 Generation   " onclick="stepOne()">
+    <form>
+      <input type="number" name="generations" value="23">
+      <input type="button" name="sizesubmit" value="  <- Step # Generations   " onclick="stepGen()">
+    </form>
+    <hr>
+    <form>
+      Rows: <input type="number" name="tableRowIn">
+      <br>Cols: <input type="number" name="tableColIn">
+      <br><input type="button" name="sizesubmit" value="  Make Table   " onclick="makeTable()">
+    </form>
+
+  </body>
+
+</html>
