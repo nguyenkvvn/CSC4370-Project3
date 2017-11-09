@@ -35,7 +35,7 @@ function stepGen()
 // makeTable() is called when the user submits the table size form.
 function makeTable()
 {
-  alert("Function is working.");
+  //alert("Function is working.");
   //replace the "gameTable" with a script to create the desired rows and elements
   //I recommend using nested for loops to create the HTML table script.
   //I leave this for you to do in case the libary we import requires special tagging to the table cells.
@@ -48,12 +48,12 @@ function makeTable()
   initializeGame(gameArray);
 
   //make the html array
-  makeTableHTML(table);
+  //makeTableHTML(table);
 }
 
 function initializeGame(inArray)
 {
-  var params =
+  params =
   {
     canvas_id: "life",
     cell_width: 10,
@@ -64,11 +64,11 @@ function initializeGame(inArray)
   alert("Function is working.");
 }
 
-function makeTableHTML(target)
+/*function makeTableHTML(target)
 {
   //TO-DO html replacement logic
 
-}
+}*/
 
 function makeTableArray(rowN, colN)
 {
@@ -89,7 +89,7 @@ function makeTableArray(rowN, colN)
   return madeArray;
 }
 
-alert("Script is working.");
+//alert("Script is working.");
 
 //Table Click Script
 //code sourced from: https://stackoverflow.com/questions/21033368/javascript-onclick-event-html-table
